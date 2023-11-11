@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace TestTask.Model
+namespace TestTask.Domain
 {
     public partial class Delivery
     {

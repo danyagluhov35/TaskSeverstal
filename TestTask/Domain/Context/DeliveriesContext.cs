@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
-using TestTask.Model;
+using TestTask.Domain;
 
-namespace TestTask.Model.Context
+namespace TestTask.Domain.Context
 {
     public partial class DeliveriesContext : DbContext
     {
