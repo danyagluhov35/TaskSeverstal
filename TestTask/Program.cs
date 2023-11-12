@@ -6,10 +6,51 @@ using TestTask.Model;
 using TestTask.Service;
 
 
+try
+{
+    SupplierModel alex = new SupplierModel();
+    var alexId = alex.Create("Alex");
+    SupplierModel bob = new SupplierModel();
+    var bobId = bob.Create("Bob");
+    SupplierModel bart = new SupplierModel();
+    var bartId = bart.Create("Bart");
 
 
+    DeliveryModel delivery1 = new(alexId, new PostDelivery());
+    var delivery1Id = delivery1.AddDelivery();
+
+    DeliveryModel delivery2 = new(bobId, new PostDelivery());
+    var delivery2Id = delivery2.AddDelivery();
+
+    DeliveryModel delivery3 = new(bartId, new PostDelivery());
+    var delivery3Id = delivery3.AddDelivery();
 
 
+    ProductModel apple1 = new();
+    apple1.Create("Яблоко-1", 50, 500, delivery1Id);
+    apple1.Create("Яблоко-1", 70, 700, delivery2Id);
+    apple1.Create("Яблоко-1", 10, 300, delivery3Id);
+    ProductModel apple2 = new();
+    apple2.Create("Яблоко-2", 5, 300, delivery1Id);
+    apple2.Create("Яблоко-2", 10, 400, delivery2Id);
+    apple2.Create("Яблоко-2", 20, 350, delivery3Id);
+
+    ProductModel pear1 = new();
+    pear1.Create("Груша-1", 7, 150, delivery1Id);
+    pear1.Create("Груша-1", 8, 200, delivery2Id);
+    pear1.Create("Груша-1", 10, 230, delivery3Id);
+    ProductModel pear2 = new();
+    pear2.Create("Груша-2", 11, 375, delivery1Id);
+    pear2.Create("Груша-2", 15, 190, delivery2Id);
+    pear2.Create("Груша-2", 18, 555, delivery3Id);
+
+    Report report = new Report();
+    report.GenerateReport();
+}
+catch (Exception ex)
+{
+    Console.WriteLine(ex.Message);
+}
 
 
 
