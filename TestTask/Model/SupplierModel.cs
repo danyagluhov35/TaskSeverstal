@@ -17,10 +17,13 @@ namespace TestTask.Model
             _db = new DeliveriesContext();
         }
 
-        public void Create(string name)
+        public int Create(string name)
         {
-            _db.Suppliers.Add(new Supplier() { SupplierName = name });
+            var newSupplier = new Supplier() { SupplierName = name };
+            _db.Suppliers.Add(newSupplier);
             _db.SaveChanges();
+
+            return newSupplier.Id;
         }
     }
 }

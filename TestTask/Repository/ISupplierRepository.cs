@@ -8,6 +8,6 @@ namespace TestTask.Repository
 {
     internal interface ISupplierRepository
     {
-        void Create(string name);
+        int Create(string name);
     }
 }
