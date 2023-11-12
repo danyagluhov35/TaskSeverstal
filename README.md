@@ -6,6 +6,6 @@
 - Найдите метод OnConfiguring, там вы увидите строку подключения к базе данных: optionsBuilder.UseSqlServer("Server=DESKTOP-M508TRG;Database=Deliveries;Trusted_Connection=True;TrustServerCertificate=Yes");
 - Вместо " Server=DESKTOP-M508TRG ", вставляете имя сервера своего SqlServer
 - Должно получится примерно следующее: optionsBuilder.UseSqlServer("Server=ВАШЕ_ИМЯ_СЕРВЕРА;Database=Deliveries;Trusted_Connection=True;TrustServerCertificate=Yes");
-- После чего нужно выполнить следующий запрос в MSSQL: INSERT INTO TypeDelivery (TypeDeliveryName) VALUES ('Hello1'),('Hello2');
+- После чего нужно выполнить следующий запрос в MSSQL: INSERT INTO TypeDelivery (TypeDeliveryName) VALUES ('Почта'),('Самолет'),('Курьер');
 
 Вот и все, остается только запустить проект :)
