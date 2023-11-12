@@ -15,6 +15,7 @@ namespace TestTask.Service
         {
             using (DeliveriesContext db = new())
             {
+                delivery.TypeDeliveryId = 1;
                 db.Deliveries.Add(delivery);
                 db.SaveChanges();
             }

@@ -19,6 +19,9 @@ namespace TestTask.Model
 
         public int Create(string name)
         {
+            if(name == null)
+                throw new ArgumentNullException("Имя поставщика не указано");
+
             var newSupplier = new Supplier() { SupplierName = name };
             _db.Suppliers.Add(newSupplier);
             _db.SaveChanges();
