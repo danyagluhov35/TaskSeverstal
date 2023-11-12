@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace TestTask.IService
 {
+    /// <summary>
+    ///     Интерфейс для расчета стоимости за один киллограм продукта
+    /// </summary>
     internal interface ISimpleCostCalculation
     {
         decimal CalculateCost(int? weight, decimal? price);

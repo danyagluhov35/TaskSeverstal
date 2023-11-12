@@ -3,6 +3,9 @@ using System.Collections.Generic;
 
 namespace TestTask.Domain
 {
+    /// <summary>
+    ///     Класс "тип поставок". Например: почтой, курьером
+    /// </summary>
     public partial class TypeDelivery
     {
         public TypeDelivery()

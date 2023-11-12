@@ -9,6 +9,10 @@ using TestTask.Repository;
 
 namespace TestTask.Model
 {
+    /// <summary>
+    ///     Модель класса Supplier. Этот класс нужен для создания какой либо логики. В данном случае здесь осуществляется
+    ///     добавление данных в таблицу "Supplier" в БД. А так же возвращается идентификатор только что созданного поставщика
+    /// </summary>
     internal class SupplierModel : ISupplierRepository
     {
         private DeliveriesContext _db;

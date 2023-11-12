@@ -3,6 +3,9 @@ using System.Collections.Generic;
 
 namespace TestTask.Domain
 {
+    /// <summary>
+    ///     Класс поставщика
+    /// </summary>
     public partial class Supplier
     {
         public Supplier()

@@ -3,6 +3,9 @@ using System.Collections.Generic;
 
 namespace TestTask.Domain
 {
+    /// <summary>
+    ///     Класс поставок
+    /// </summary>
     public partial class Delivery
     {
         public Delivery()

@@ -9,6 +9,10 @@ using TestTask.IService;
 
 namespace TestTask.Service
 {
+    /// <summary>
+    ///     Класс для добавления типа поставки. Является паттерном под названием "стратегия". В данном случае используется стратегия 
+    ///     поставки через "почту"
+    /// </summary>
     internal class PostDelivery : IDelivery
     {
         public void AddDelivery(Delivery delivery)

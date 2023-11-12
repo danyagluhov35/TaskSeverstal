@@ -7,6 +7,9 @@ using TestTask.Domain;
 
 namespace TestTask.IService
 {
+    /// <summary>
+    ///     Интерфейс для поиска продукта по идентификатору
+    /// </summary>
     internal interface IFindProduct
     {
         Task<Product> Find(int id);

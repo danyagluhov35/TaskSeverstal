@@ -6,6 +6,10 @@ using TestTask.Domain;
 
 namespace TestTask.Domain.Context
 {
+    /// <summary>
+    ///     Класс контекста данных. Определяет, каким образом объекты модели таких как Deliveries,Products
+    ///     будут отображаться в базе данных
+    /// </summary>
     public partial class DeliveriesContext : DbContext
     {
         public DeliveriesContext()

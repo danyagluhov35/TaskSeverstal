@@ -10,6 +10,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace TestTask.Service
 {
+    /// <summary>
+    ///     Класс для поиска в таблице Product по Id
+    /// </summary>
     internal class FindProduct : IFindProduct
     {
         private DeliveriesContext _db;

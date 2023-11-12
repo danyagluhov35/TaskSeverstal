@@ -9,6 +9,10 @@ using TestTask.Repository;
 
 namespace TestTask.Model
 {
+    /// <summary>
+    ///     Модель класса Product. Этот класс нужен для создания какой либо логики. В данном случае здесь осуществляется
+    ///     добавление данных в таблицу "продукты" в БД
+    /// </summary>
     internal class ProductModel : IProductRepository
     {
         private DeliveriesContext _db;

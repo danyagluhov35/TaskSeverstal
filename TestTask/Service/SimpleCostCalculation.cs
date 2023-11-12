@@ -7,6 +7,9 @@ using TestTask.IService;
 
 namespace TestTask.Service
 {
+    /// <summary>
+    ///     Класс для расчета стоимости одного киллограмма продукта
+    /// </summary>
     internal class SimpleCostCalculation : ISimpleCostCalculation
     {
         public decimal CalculateCost(int? weight, decimal? price)

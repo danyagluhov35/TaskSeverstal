@@ -3,6 +3,9 @@ using System.Collections.Generic;
 
 namespace TestTask.Domain
 {
+    /// <summary>
+    ///     Класс продуктов
+    /// </summary>
     public partial class Product
     {
         public int Id { get; set; }

@@ -54,6 +54,11 @@ catch (Exception ex)
 
 
 
+
+
+/// <summary>
+///     Класс который генерирует отчет по поставкам, поставщикам, и продуктам
+/// </summary>
 public class Report
 {
     private DeliveriesContext _db;

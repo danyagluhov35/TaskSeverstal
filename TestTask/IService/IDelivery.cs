@@ -7,6 +7,9 @@ using TestTask.Domain;
 
 namespace TestTask.IService
 {
+    /// <summary>
+    ///     Интерфейс для добавления поставок
+    /// </summary>
     public interface IDelivery
     {
         void AddDelivery(Delivery delivery);
