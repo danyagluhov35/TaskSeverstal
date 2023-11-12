@@ -10,6 +10,7 @@ namespace TestTask.Domain.Context
     {
         public DeliveriesContext()
         {
+            Database.EnsureCreated();
         }
 
         public DeliveriesContext(DbContextOptions<DeliveriesContext> options)
