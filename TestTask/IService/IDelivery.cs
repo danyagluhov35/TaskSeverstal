@@ -9,6 +9,6 @@ namespace TestTask.IService
 {
     public interface IDelivery
     {
-        int AddDelivery(Delivery delivery);
+        void AddDelivery(Delivery delivery);
     }
 }
