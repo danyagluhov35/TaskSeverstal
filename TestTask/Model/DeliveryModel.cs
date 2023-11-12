@@ -20,7 +20,7 @@ namespace TestTask.Model
             this.SupplierId = SupplierId;
             this.ServiceDelivery = ServiceDelivery;
         }
-        public void AddDelivery()
+        public int AddDelivery()
         {
             var delivery = new Delivery
             {
@@ -29,6 +29,8 @@ namespace TestTask.Model
                 TypeDeliveryId = TypeDeliveryId
             };
             ServiceDelivery.AddDelivery(delivery);
+
+            return delivery.Id;
         }
     }
 }
