@@ -19,7 +19,7 @@ try
     DeliveryModel delivery1 = new(alexId, new PostDelivery());
     var delivery1Id = delivery1.AddDelivery();
 
-    DeliveryModel delivery2 = new(bobId, new PostDelivery());
+    DeliveryModel delivery2 = new(bobId, new AirDelivery());
     var delivery2Id = delivery2.AddDelivery();
 
     DeliveryModel delivery3 = new(bartId, new PostDelivery());
