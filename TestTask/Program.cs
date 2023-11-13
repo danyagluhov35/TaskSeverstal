@@ -8,6 +8,11 @@ using TestTask.Service;
 
 try
 {
+    /// <summary>
+    ///     Создаем экземпляр класса "Поставщик"
+    /// </summary>
+    /// <param name="alexId">Возвращается Id только что созданного поставщика</param>
+ 
     SupplierModel alex = new SupplierModel();
     var alexId = alex.Create("Alex");
     SupplierModel bob = new SupplierModel();
@@ -15,7 +20,12 @@ try
     SupplierModel bart = new SupplierModel();
     var bartId = bart.Create("Bart");
 
-
+    /// <summary>
+    ///     Создаем экземпляр класса "Поставок". Передаем в метод AddDelivery Id "Поставщика", и 
+    ///     способ которым будет поставляется товар
+    /// </summary>
+    /// <param name="delivery1Id">Возвращается Id созданной поставки</param>
+    
     DeliveryModel delivery1 = new(alexId, new PostDelivery());
     var delivery1Id = delivery1.AddDelivery();
 
@@ -25,6 +35,12 @@ try
     DeliveryModel delivery3 = new(bartId, new PostDelivery());
     var delivery3Id = delivery3.AddDelivery();
 
+    /// <summary>
+    ///     Создаем экземпляр класса "Продукта". Передаем в метод "Create" название продукта, 
+    ///     вес, общая цена, и Id поставки. Id поставки передается для того, что бы связать
+    ///     данные с таблицей "Продукты"
+    /// </summary>
+    /// <param name="delivery1Id">Возвращается Id созданной поставки</param>
 
     ProductModel apple1 = new();
     apple1.Create("Яблоко-1", 50, 500, delivery1Id);
