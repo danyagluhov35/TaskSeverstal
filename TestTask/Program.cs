@@ -62,7 +62,7 @@ catch (Exception ex)
 public class Report
 {
     private DeliveriesContext _db;
-    ISimpleCostCalculation CostCalculation;
+    private ISimpleCostCalculation CostCalculation;
     public Report()
     {
         _db = new DeliveriesContext();

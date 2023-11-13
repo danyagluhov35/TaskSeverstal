@@ -17,7 +17,7 @@ namespace TestTask.Model
         private DateTime DeliveryDateCreate = DateTime.UtcNow;
         private int SupplierId;
 
-        IDelivery ServiceDelivery;
+        private IDelivery ServiceDelivery;
         public DeliveryModel(int SupplierId, IDelivery ServiceDelivery)
         {
             this.SupplierId = SupplierId;

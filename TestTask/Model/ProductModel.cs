@@ -23,6 +23,9 @@ namespace TestTask.Model
 
         public void Create(string name, int productWeight, decimal productPrice, int deliveryId)
         {
+            if (string.IsNullOrEmpty(name) || productWeight <= 0 || deliveryId < 0)
+                throw new ArgumentException("Некорректные параметры для создания продукта.");
+
             _db.Products.Add(new Product() { ProductName = name, ProductWeight = productWeight, ProductPrice = productPrice, DeliveryId = deliveryId });
             _db.SaveChanges();
         }
